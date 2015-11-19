@@ -1,13 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
+
 <title> Curriculum Vitae </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-<link rel="stylesheet" href="css/bootstrap.min.css">
+  <!--
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> 
+   <script src="js/bootstrap.min.js"></script> 
+  
+ <link rel="stylesheet" href="css/bootstrap.min.css"> 
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">     
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"> 
+ 
+ -->
+ 
+ 
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+
+  
+  
   
     <style>
 
@@ -28,6 +46,16 @@
 	  min-width: 1000px;
 	  max-width: 100%;
 	}
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
 
 	.nav-div{
 	width: 100%;
@@ -38,6 +66,7 @@
 	text-align: center;
 	fluid: auto;
     position: fixed;
+	float: left;
     left:0;
     right:0;
 	z-index: +2;
@@ -139,7 +168,7 @@
 
 	.col-sm-12{
 
-	background-color: #f1f1f1;
+	background-color: white;
 	
 	min-width: 300px;
 	max-width: 100%;
@@ -178,31 +207,27 @@
 	
 	width: 88%;
 	}
+  
+  
+  
+  .modal fade{
+   position: fixed;
+   z-index: +3;
+   bottom: 10px;
+   right:10px;
+  }
  
- 
-
+	
 
  
 
     </style>
+	
 </head>
 
 <body id = 'Home'>
 <div class="container-fluid">
 
-
-
-
-
-
-
-
-
-
-<!--
-
-
-  -->
 <div class = "nav-div">
 <section>  
 <ul id = 'navLinks'>
@@ -219,14 +244,19 @@
 </ul>
 </section>
   </div>
-  
-  
 
+  
+  
+  </div>
+
+
+
+  
   
   <div class= "col-sm-6">
 					<section>
 				  <ul id='services'>
-					<h2><b>&#x2606;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Keith Doolan  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &#x2606;</b></h2>
+					<h2><b>&#x2606;   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Keith Doolan  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &#x2606;</b></h2>
 					<h3><b> Computing Student - Institute of Technology, Tallaght </b></h3>
 					<li>
 					 <a href ="https://www.facebook.com/keith.doolan.9" style="text-decoration:none;" > <div class='entypo-facebook'></div> </a>
@@ -249,6 +279,36 @@
 						<img src= "img/grad.jpg" class="img-circle" alt="keith">
 					</div>
 				</div>
+			
+			
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-md" data-toggle="modal" data-target="#myModal" style="float: right; position: fixed; bottom: 10px;
+   right:10px; ">Contact</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Contact Details</h4>
+        </div>
+        <div class="modal-body">
+          <p>
+		  E-Mail: kdoolan90@gmail.com <br>
+		  Number: 0858441021
+		  </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+			
 			
 		        
 		<div class = "container">
@@ -289,21 +349,90 @@
 					<font>
 						<center><h1>&#x2606; Academic Projects &#x2606;</h1></center>
 							<body>
-							<br>
-							<h3> 3rd Year Computing Project</h3>
+						     <br>
 						
-							<iframe width="100%" height="600"
-							src="https://www.youtube.com/embed/xAcp8Tm9el8">
-							</iframe>
-							
+						<div class="bs-example">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Year 4 Project - A PCI DSS Compliant Network Infrastructure</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                    <p>
+					The Payment Card Industry Data Security Standard (PCI DSS) was developed by the Security 
+			    Standards Council to protect cardholder data when being handled by third party vendors,
+			    merchants and card payment processing companies, let’s call these entities.
+                This standard is a comprehensive set of requirements that must be followed
+				by entities that require cardholder data to conduct business. An entity must 
+				be PCI DSS compliant before handling data. The set of requirements cover all 
+				aspects of network security (Firewalls, Encryption, Anti-Virus protection, 
+				Access Control Lists and monitoring of the network) and also the physical 
+				security of hardware. 
+					</p>
+					<br>
+					<p>
+					The end goal of this project is to have a functional network established to accept card payments through use of a payment gateway
+					and be fully compliant according to the Data Security Council when doing so. furthermore,
+                    policies and procedures need to drafted for continual compliancy and guidance for other users of the network.  					
+					</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"> Year 3 Project - BabyGuard Baby Monitor </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <p>
+					
+					<iframe width="80%" height="450"
+						   src="https://www.youtube.com/embed/xAcp8Tm9el8">
+						</iframe>
+					
+					</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Year 2 Project - Zeus Stock Control System</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                   
+				   
+				   <p>
+				
+				   </p>
+				   <p>
+					<img src= "img/zeus.png" class="zeus" alt="Zeus stock control system" height="500">
+					</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+						
+						
+
+
 							</body>
 					</font>
 					</div>
 		
 				
-					<div class= "col-sm-12" id ='Employment'>
+				<div class= "col-sm-12" id ='Employment' >
 						<font>
 									<center><h1>&#x2606; Employment History &#x2606;</h1></center>
+					<div class= "text-body" style="PADDING-LEFT: 100px">			
 							<body>
 							<br><br><br><br>
 							<p>
@@ -355,7 +484,7 @@
 							</body>	
 						</font>
 					</div>
-				
+				</div>
 				
 							<div class= "col-sm-12"  id = 'Skills'>
 							<font>
@@ -369,7 +498,7 @@
 							</div>
 				
 														
-											<div class= "col-sm-12"  id = 'Hobbies'>
+											<div class= "col-sm-12"  id = 'Hobbies' style="margin-bottom: 100px">
 												<font>
 													<center><h1>&#x2606; Hobbies & Interests &#x2606;</h1></center>
 														<body>
@@ -398,4 +527,5 @@
 </div>
 
 
+ </script>
 </html>
